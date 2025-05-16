@@ -3,31 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Enter Metaverse</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-    }
-
-    #enterBtn {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #6a0dad;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    #enterBtn:hover {
-      background-color: #5800b0;
-    }
-  </style>
 </head>
 <body>
 
@@ -35,11 +10,12 @@
   <button id="enterBtn">Enter</button>
 
   <script>
-    const statusPara = document.getElementById("status");
-    const enterButton = document.getElementById("enterBtn");
-
-    enterButton.addEventListener("click", function() {
-      statusPara.outerHTML = '<h1 id="status">Entered Metaverse</h1>';
+    document.getElementById("enterBtn").addEventListener("click", function() {
+      const statusPara = document.getElementById("status");
+      const heading = document.createElement("h1");
+      heading.id = "status";
+      heading.textContent = "Entered Metaverse";
+      statusPara.replaceWith(heading);
     });
   </script>
 
