@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Enter Metaverse</title>
+  <script>
+    function enterMetaverse() {
+      // Get the paragraph by ID
+      const statusPara = document.getElementById("status");
+
+      // Update content to an <h1> with the new message
+      statusPara.innerHTML = "<h1>Entered Metaverse</h1>";
+    }
+  </script>
 </head>
 <body>
 
+  <!-- Initial Paragraph -->
   <p id="status">Enter the Metaverse</p>
-  <button id="enterBtn">Enter</button>
 
-  <script>
-    document.getElementById("enterBtn").addEventListener("click", function() {
-      const statusPara = document.getElementById("status");
-      const heading = document.createElement("h1");
-      heading.id = "status";
-      heading.textContent = "Entered Metaverse";
-      statusPara.replaceWith(heading);
-    });
-  </script>
+  <!-- Button -->
+  <button id="enterBtn" onclick="enterMetaverse()">Enter</button>
 
 </body>
 </html>
